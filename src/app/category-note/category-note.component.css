@@ -1,0 +1,53 @@
+.category-container {
+    margin: 20px 0;
+  }
+  
+  .category-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .category-list li {
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .category-list li:hover {
+    background-color: #f0f0f0;
+  }
+  
+
+  .note-container {
+    display: none; /* Masquer les notes par défaut */
+    margin-top: 20px;
+}
+.note-container.active {
+    display: block; /* Afficher les notes lorsque la classe active est ajoutée */
+}
+
+.category-container {
+    margin: 20px 0;
+  }
+  
+  .category-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .category-list li {
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .category-list li:hover {
+    background-color: #f0f0f0;
+  }
+  

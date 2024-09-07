@@ -1,0 +1,59 @@
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">Notes</a>
+  </div>
+</nav>
+<div class="container">
+  <div class="welcome-message">Bienvenue sur notre site !</div>
+  <div class="questions-container">
+      <div class="questions">
+          <div class="question">Quelle est votre couleur préférée ?</div>
+          <div class="question">Quel est votre passe-temps favori ?</div>
+          <div class="question">Quel est votre plat préféré ?</div>
+          <div class="question">Quel est votre livre préféré ?</div>
+      </div>
+  </div>
+</div>
+
+
+  
+
+
+<div class="container-sm">
+  <label for="exampleFormControlTextarea1" class="form-label">Ajouter une note</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  <br><br>
+  <button type="button" class="btn btn-success" onclick="playSound()">Ajouter</button>   
+</div>
+
+<audio id="clickSound" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+
+<script>
+  function playSound() {
+      const sound = document.getElementById('clickSound');
+      sound.play();
+  }
+</script>
+
+
+<br><br><br>
+<app-notelist></app-notelist>
+
+
+<form (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput [(ngModel)]="note.title" name="title" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Content</mat-label>
+    <textarea matInput [(ngModel)]="note.content" name="content"></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Save Note</button>
+</form>

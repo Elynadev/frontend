@@ -1,0 +1,15 @@
+.btn-success:active {
+    animation: pulse 0.1s ease;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espace entre les cartes */
+  }
+  .card {
+    /* Styles pour les cartes */
+  }
+  .card-body {
+    text-align: center;
+  }

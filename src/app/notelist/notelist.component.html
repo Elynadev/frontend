@@ -1,0 +1,52 @@
+
+
+    <div class="container my-4">
+        <div class="card-container">
+            <!-- Carte 1 -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Note 1</h5>
+                    <p class="card-text">Ceci est une note avec sa catégorie.</p>
+                    <span class="badge bg-primary">Catégorie A</span>
+                </div>
+            </div>
+            <!-- Carte 2 -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Note 2</h5>
+                    <p class="card-text">Une autre note avec sa propre catégorie.</p>
+                    <span class="badge bg-success">Catégorie B</span>
+                </div>
+            </div>
+            <!-- Carte 3 -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Note 3</h5>
+                    <p class="card-text">Une note supplémentaire avec sa catégorie.</p>
+                    <span class="badge bg-warning text-dark">Catégorie C</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <app-category-note>
+        [categories]="categories"
+        (categorySelected)="onCategorySelected($event)"
+
+    </app-category-note>
+
+
+<!-- 
+<mat-list>
+  <mat-list-item *ngFor="let note of notes">
+    <div>
+      <h3>{{ note.title }}</h3>
+      <p>{{ note.content }}</p>
+      <p><small>{{ note.date | date:'short' }}</small></p>
+      <button mat-button (click)="editNote(note)">Edit</button>
+      <button mat-button color="warn" (click)="deleteNote(note.id)">Delete</button>
+    </div>
+  </mat-list-item>
+</mat-list> -->

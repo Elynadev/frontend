@@ -1,0 +1,81 @@
+<p>category-note works!</p>
+<div class="category-container">
+    <h3>Catégories</h3>
+
+    <h3> Que voulez vous ecrire aujourd'hui?</h3>
+    <ul class="category-list">
+      <!-- <li *ngFor="let category of categories" (click)="onCategorySelect(category)">
+        {{ category }} -->
+      
+    </ul>
+  </div>
+  
+
+
+
+  <div class="container my-4">
+    <div class="row">
+        <div class="col-md-3">
+            <h4>Catégories</h4>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-action" data-category="cat1">Catégorie A</li>
+                <li class="list-group-item list-group-item-action" data-category="cat2">Catégorie B</li>
+                <li class="list-group-item list-group-item-action" data-category="cat3">Catégorie C</li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <div id="cat1" class="note-container">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Note 1 - Catégorie A</h5>
+                        <p class="card-text">Détails de la note pour Catégorie A.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="cat2" class="note-container">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Note 2 - Catégorie B</h5>
+                        <p class="card-text">Détails de la note pour Catégorie B.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="cat3" class="note-container">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Note 3 - Catégorie C</h5>
+                        <p class="card-text">Détails de la note pour Catégorie C.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.list-group-item').forEach(item => {
+        item.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+
+            // Masquer toutes les notes
+            document.querySelectorAll('.note-container').forEach(container => {
+                container.classList.remove('active');
+            });
+
+            // Afficher les notes pour la catégorie sélectionnée
+            document.getElementById(category).classList.add('active');
+        });
+    });
+</script>
+
+
+
+
+<div class="category-container">
+  <h3>Catégories....</h3>
+  <ul class="category-list">
+    <li *ngFor="let category of categories" (click)="onCategorySelect(category)">
+      {{ category }}
+    </li>
+  </ul>
+</div>
